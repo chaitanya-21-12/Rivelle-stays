@@ -1,13 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { NAV_LINKS, PROPERTY } from "../data/site";
 
 const Footer = () => {
-  const scrollTo = (e, href) => {
-    e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer className="bg-ink text-cream/80">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
@@ -19,8 +15,8 @@ const Footer = () => {
               <span className="text-[10px] tracking-widest-3 text-cream/60">BOUTIQUE STAYS</span>
             </div>
             <p className="text-cream/60 text-sm leading-relaxed max-w-xs">
-              A boutique retreat wrapped in gerua warmth — a small property that feels quietly
-              personal, wherever your journey has taken you.
+              A boutique retreat wrapped in Jaipur’s heritage warmth — a small property that
+              feels quietly personal, wherever your journey has taken you.
             </p>
             <div className="flex items-center gap-3 mt-6">
               <SocialBtn icon={<Instagram size={15} />} />
@@ -33,14 +29,13 @@ const Footer = () => {
             <div className="text-[10px] tracking-widest-3 text-gerua-glow mb-5">EXPLORE</div>
             <ul className="space-y-3">
               {NAV_LINKS.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={(e) => scrollTo(e, l.href)}
+                <li key={l.to}>
+                  <Link
+                    to={l.to}
                     className="text-sm text-cream/70 hover:text-gerua-glow transition-colors"
                   >
                     {l.label.charAt(0) + l.label.slice(1).toLowerCase()}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -68,9 +63,9 @@ const Footer = () => {
 
         <div className="mt-16 pt-8 border-t border-cream/10 flex items-center justify-between flex-wrap gap-3">
           <div className="text-[11px] tracking-widest-2 text-cream/50">
-            © 2026 Rivelle Boutique Stays. All rights reserved.
+            © {new Date().getFullYear()} Rivelle Boutique Stays. All rights reserved.
           </div>
-          <div className="text-[10px] tracking-widest-3 text-cream/40">CRAFTED WITH CARE</div>
+          <div className="text-[10px] tracking-widest-3 text-cream/40">CRAFTED WITH CARE · JAIPUR</div>
         </div>
       </div>
     </footer>

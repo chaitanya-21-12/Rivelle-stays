@@ -7,8 +7,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #f5ede0;
-    color: #1c1512;
+    background: #edcdc2;
+    color: #2a1815;
 }
 
 code {
@@ -17,67 +17,63 @@ code {
 
 @layer base {
   :root {
-        --background: 36 40% 92%;
-        --foreground: 20 20% 12%;
-        --card: 36 40% 96%;
-        --card-foreground: 20 20% 12%;
-        --popover: 36 40% 96%;
-        --popover-foreground: 20 20% 12%;
-        --primary: 20 60% 45%;
-        --primary-foreground: 36 40% 96%;
-        --secondary: 30 30% 88%;
-        --secondary-foreground: 20 20% 12%;
-        --muted: 30 25% 90%;
-        --muted-foreground: 20 15% 40%;
-        --accent: 25 55% 55%;
-        --accent-foreground: 36 40% 96%;
+        /* Johri-inspired warm terracotta pink base */
+        --background: 14 44% 84%;         /* #edcdc2 */
+        --foreground: 15 32% 12%;         /* deep ink */
+        --card: 22 42% 92%;
+        --card-foreground: 15 32% 12%;
+        --popover: 22 42% 92%;
+        --popover-foreground: 15 32% 12%;
+        --primary: 4 57% 35%;             /* rose burgundy */
+        --primary-foreground: 22 42% 96%;
+        --secondary: 14 40% 78%;
+        --secondary-foreground: 15 32% 12%;
+        --muted: 18 40% 88%;
+        --muted-foreground: 15 20% 35%;
+        --accent: 22 66% 48%;             /* gerua saffron */
+        --accent-foreground: 22 42% 96%;
         --destructive: 0 70% 45%;
-        --destructive-foreground: 36 40% 96%;
-        --border: 30 20% 82%;
-        --input: 30 20% 82%;
-        --ring: 20 60% 45%;
+        --destructive-foreground: 22 42% 96%;
+        --border: 14 30% 74%;
+        --input: 14 30% 74%;
+        --ring: 4 57% 35%;
         --radius: 0.5rem;
     }
 }
 
 @layer base {
   * { @apply border-border; }
-  body { @apply bg-background text-foreground; }
+  body { @apply bg-blush text-ink; }
 }
 
-/* Serif utility for headings */
 .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
 
-/* Section fade-in on scroll (via IntersectionObserver + class) */
+/* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
-/* Wide tracking utility */
 .tracking-widest-2 { letter-spacing: 0.28em; }
 .tracking-widest-3 { letter-spacing: 0.4em; }
 
-/* Vertical text on hero side (decorative R) */
 .rot-vert { writing-mode: vertical-rl; transform: rotate(180deg); }
 
-/* Custom button pulse for enquire (bottom right) */
 @keyframes soft-pulse {
-  0%,100% { box-shadow: 0 0 0 0 rgba(201, 106, 42, 0.5); }
-  50% { box-shadow: 0 0 0 12px rgba(201, 106, 42, 0); }
+  0%,100% { box-shadow: 0 0 0 0 rgba(139, 44, 38, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(139, 44, 38, 0); }
 }
 .enquire-pulse { animation: soft-pulse 2.5s infinite; }
 
-/* Ken burns for hero */
 @keyframes ken-burns {
   0% { transform: scale(1) translate(0,0); }
-  100% { transform: scale(1.12) translate(-1%, -1%); }
+  100% { transform: scale(1.14) translate(-2%, -1%); }
 }
-.ken-burns { animation: ken-burns 22s ease-out infinite alternate; }
+.ken-burns { animation: ken-burns 24s ease-out infinite alternate; }
 
 /* Gallery hover */
 .gallery-item img { transition: transform 0.9s ease, filter 0.6s ease; }
 .gallery-item:hover img { transform: scale(1.06); filter: brightness(1.08); }
 
-/* Underline on nav */
+/* Nav underline */
 .nav-link { position: relative; }
 .nav-link::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px;
@@ -86,34 +82,80 @@ code {
 }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
 
-/* Book Now / gerua button */
+/* Primary rose button */
+.btn-rose {
+  background: linear-gradient(135deg, #8b2c26 0%, #6d1e19 100%);
+  color: #f7ebe0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 8px 24px -10px rgba(109, 30, 25, 0.55);
+}
+.btn-rose:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 14px 30px -10px rgba(109, 30, 25, 0.7); }
+.btn-rose:active { transform: translateY(0); }
+.btn-rose:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Gerua saffron button (secondary) */
 .btn-gerua {
   background: linear-gradient(135deg, #d67437 0%, #b25617 100%);
-  color: #fff;
+  color: #f7ebe0;
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-  box-shadow: 0 8px 24px -8px rgba(178, 86, 23, 0.6);
+  box-shadow: 0 8px 24px -10px rgba(178, 86, 23, 0.6);
 }
-.btn-gerua:hover { filter: brightness(1.06); transform: translateY(-1px); box-shadow: 0 14px 30px -10px rgba(178, 86, 23, 0.7); }
-.btn-gerua:active { transform: translateY(0); }
+.btn-gerua:hover { filter: brightness(1.06); transform: translateY(-1px); }
+
+/* Outline button */
+.btn-outline-rose {
+  border: 1px solid #8b2c26;
+  color: #8b2c26;
+  background: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.btn-outline-rose:hover { background: #8b2c26; color: #f7ebe0; }
 
 .btn-outline-cream {
-  border: 1px solid rgba(245,237,224,0.55);
-  color: #f5ede0;
+  border: 1px solid rgba(247,235,224,0.55);
+  color: #f7ebe0;
   background: transparent;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
-.btn-outline-cream:hover { background: rgba(245,237,224,0.08); border-color: rgba(245,237,224,0.85); }
+.btn-outline-cream:hover { background: rgba(247,235,224,0.1); border-color: rgba(247,235,224,0.85); }
 
-/* Form input styling override */
+/* Warm underline input */
 .input-warm {
   background: transparent;
-  border: 0; border-bottom: 1px solid rgba(28,21,18,0.25);
+  border: 0; border-bottom: 1px solid rgba(42,24,21,0.25);
   border-radius: 0; padding: 0.6rem 0; font-size: 0.95rem;
-  color: #1c1512; width: 100%;
+  color: #2a1815; width: 100%;
   transition: border-color 0.3s ease;
 }
-.input-warm:focus { outline: none; border-bottom-color: #c96a2a; }
+.input-warm:focus { outline: none; border-bottom-color: #8b2c26; }
 
-/* Hide scrollbar for section snap indicator */
+/* Bordered field */
+.field-warm {
+  background: rgba(247,235,224,0.7);
+  border: 1px solid rgba(139,44,38,0.15);
+  border-radius: 0.375rem;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+  color: #2a1815;
+  width: 100%;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.field-warm:focus { outline: none; border-color: #8b2c26; background: #fff9f2; }
+.field-warm::placeholder { color: rgba(42,24,21,0.4); }
+
+/* Section divider ornament */
+.ornament-line { display: flex; align-items: center; gap: 0.75rem; }
+.ornament-line::before, .ornament-line::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: 0.4; }
+
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
+
+/* Page transition */
+.page-in { animation: fade-up 0.5s ease-out both; }
+
+/* Loading placeholder shimmer for images */
+.img-load {
+  background: linear-gradient(90deg, rgba(139,44,38,0.06) 0%, rgba(139,44,38,0.14) 50%, rgba(139,44,38,0.06) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.4s linear infinite;
+}

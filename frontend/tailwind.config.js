@@ -19,15 +19,24 @@ module.exports = {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
-  			ink: '#1c1512',
-  			cream: '#f5ede0',
+  			/* Johri-inspired heritage pink + gerua palette */
+  			blush: '#edcdc2',       /* main body background — Johri pink */
+  			blushSoft: '#f4dcd0',   /* softer variant */
+  			blushDeep: '#d9a898',   /* deeper pink for hover states */
+  			cream: '#f7ebe0',       /* warm off-white */
+  			rose: {
+  				DEFAULT: '#8b2c26',   /* deep burgundy / primary heading */
+  				light: '#a53a30',
+  				dark: '#6d1e19',
+  			},
   			gerua: {
-  				DEFAULT: '#c96a2a',
+  				DEFAULT: '#c96a2a',   /* saffron / secondary accent */
   				light: '#e08a4c',
   				dark: '#a54f18',
   				glow: '#f0a35e',
   			},
-  			sand: '#e8d9c0',
+  			ink: '#2a1815',         /* near-black warm */
+  			sand: '#e8d4c1',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -66,6 +75,7 @@ module.exports = {
   			'fade-up': { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
   			'fade-in': { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
   			'scroll-bounce': { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(8px)' } },
+  			'shimmer': { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -73,6 +83,7 @@ module.exports = {
   			'fade-up': 'fade-up 0.9s ease-out both',
   			'fade-in': 'fade-in 1.2s ease-out both',
   			'scroll-bounce': 'scroll-bounce 2s ease-in-out infinite',
+  			'shimmer': 'shimmer 3s linear infinite',
   		}
   	}
   },

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "../data/site";
 
@@ -13,55 +14,67 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleNav = (e, href) => {
-    e.preventDefault();
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    setOpen(false);
-  };
-
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-ink/90 backdrop-blur-md py-3 shadow-[0_2px_20px_-8px_rgba(0,0,0,0.4)]" : "bg-transparent py-5"
+        scrolled
+          ? "bg-blush/95 backdrop-blur-md py-3 shadow-[0_2px_20px_-8px_rgba(109,30,25,0.25)] border-b border-rose/10"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" onClick={(e) => handleNav(e, "#home")} className="flex items-baseline gap-3">
-          <span className="font-display italic text-3xl md:text-4xl text-cream leading-none">Rivelle</span>
-          <span className="hidden sm:inline text-[10px] md:text-[11px] tracking-widest-3 text-cream/70 font-light">
+        <Link to="/" className="flex items-baseline gap-3">
+          <span
+            className={`font-display italic text-3xl md:text-4xl leading-none ${
+              scrolled ? "text-rose" : "text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
+            }`}
+          >
+            Rivelle
+          </span>
+          <span
+            className={`hidden sm:inline text-[10px] md:text-[11px] tracking-widest-3 font-light ${
+              scrolled ? "text-rose/70" : "text-cream/80"
+            }`}
+          >
             BOUTIQUE STAYS
           </span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={(e) => handleNav(e, l.href)}
-              className="nav-link text-[11px] tracking-widest-2 text-cream/85 hover:text-cream transition-colors"
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.to === "/"}
+              className={({ isActive }) =>
+                `nav-link text-[11px] tracking-widest-2 transition-colors ${
+                  isActive ? "active" : ""
+                } ${
+                  scrolled
+                    ? "text-ink/80 hover:text-rose"
+                    : "text-cream/85 hover:text-cream"
+                }`
+              }
             >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            onClick={(e) => handleNav(e, "#contact")}
-            className="btn-gerua hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[11px] tracking-widest-2 font-medium"
+          <Link
+            to="/rooms"
+            className="btn-rose hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[11px] tracking-widest-2 font-medium"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-cream/90" />
             BOOK NOW
-          </a>
+          </Link>
 
           <button
             aria-label="Toggle menu"
-            className="lg:hidden text-cream p-2"
+            className={`lg:hidden p-2 ${scrolled ? "text-ink" : "text-cream"}`}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -71,25 +84,30 @@ const Header = () => {
 
       {/* Mobile nav */}
       {open && (
-        <div className="lg:hidden bg-ink/95 backdrop-blur-md border-t border-cream/10">
+        <div className="lg:hidden bg-blush border-t border-rose/15 shadow-lg">
           <nav className="px-6 py-4 flex flex-col gap-4">
             {NAV_LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={(e) => handleNav(e, l.href)}
-                className="text-[12px] tracking-widest-2 text-cream/85 py-1.5"
+              <NavLink
+                key={l.to}
+                to={l.to}
+                end={l.to === "/"}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `text-[12px] tracking-widest-2 py-1.5 ${
+                    isActive ? "text-rose font-semibold" : "text-ink/80"
+                  }`
+                }
               >
                 {l.label}
-              </a>
+              </NavLink>
             ))}
-            <a
-              href="#contact"
-              onClick={(e) => handleNav(e, "#contact")}
-              className="btn-gerua rounded-full px-5 py-3 text-center text-[11px] tracking-widest-2 font-medium mt-2"
+            <Link
+              to="/rooms"
+              onClick={() => setOpen(false)}
+              className="btn-rose rounded-full px-5 py-3 text-center text-[11px] tracking-widest-2 font-medium mt-2"
             >
               BOOK NOW
-            </a>
+            </Link>
           </nav>
         </div>
       )}
