@@ -37,9 +37,8 @@ export const NAV_LINKS = [
   { label: "CONTACT", to: "/contact" },
 ];
 
-// Hero: curated stock image — dark moody Jaipur archway with lanterns
-export const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1591946522651-90fbace43004?auto=format&fit=crop&w=2000&q=85";
+// Hero: the actual Rivelle property front (dusk shot)
+export const HERO_IMAGE = "/photos/property_front.png";
 
 export const ROOMS = [
   {
