@@ -19,18 +19,18 @@ const About = () => {
             <p>
               Rivelle Boutique Stays is an intimate homestay-style property where hand-picked interiors,
               warm hospitality and a distinctly Indian sense of place come together. Every corner is
-              composed to feel personal \u2014 never like a chain hotel.
+              composed to feel personal — never like a chain hotel.
             </p>
             <p>
               Whether you're here for a slow weekend, a family celebration or a long stay away from
-              the city, our small team is on hand to make it feel like home \u2014 only warmer.
+              the city, our small team is on hand to make it feel like home — only warmer.
             </p>
           </div>
 
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-ink/10 pt-8">
             <Stat number="3" label="ROOM CATEGORIES" />
-            <Stat number="24\u00d77" label="FRONT DESK" />
-            <Stat number="\u2605\u2605\u2605" label="BOUTIQUE CLASS" />
+            <Stat number="24×7" label="FRONT DESK" />
+            <Stat number="5.0★" label="9 GOOGLE REVIEWS" />
           </div>
         </div>
 

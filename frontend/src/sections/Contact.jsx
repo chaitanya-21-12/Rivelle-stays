@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MessageCircle, Phone, Mail, Send } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
+import { PROPERTY } from "../data/site";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -47,14 +48,44 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14">
           {/* Contact channels */}
           <div className="lg:col-span-2 space-y-4 reveal">
-            <ContactCard
-              icon={<MessageCircle size={18} />}
-              label="WHATSAPP"
-              value="Chat with the property"
-              accent
-            />
-            <ContactCard icon={<Phone size={18} />} label="PHONE" value="[TO CONFIRM]" />
-            <ContactCard icon={<Mail size={18} />} label="EMAIL" value="[OWNER_EMAIL]" />
+            <a
+              href={`https://wa.me/${PROPERTY.whatsapp}?text=${encodeURIComponent("Hi Rivelle, I'd like to enquire about a stay.")}`}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-4 p-5 rounded-sm border transition-all hover:-translate-y-0.5 bg-gerua/10 border-gerua/25 hover:bg-gerua/15"
+            >
+              <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 bg-gerua text-cream">
+                <MessageCircle size={18} />
+              </div>
+              <div>
+                <div className="text-[10px] tracking-widest-3 text-ink/55 mb-1">WHATSAPP</div>
+                <div className="font-display text-lg text-ink">Chat with the property</div>
+              </div>
+            </a>
+            <a
+              href={`tel:${PROPERTY.phoneRaw}`}
+              className="flex items-center gap-4 p-5 rounded-sm border transition-all hover:-translate-y-0.5 bg-background border-ink/10 hover:border-gerua/40"
+            >
+              <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 bg-muted text-gerua-dark">
+                <Phone size={18} />
+              </div>
+              <div>
+                <div className="text-[10px] tracking-widest-3 text-ink/55 mb-1">PHONE</div>
+                <div className="font-display text-lg text-ink">{PROPERTY.phone}</div>
+              </div>
+            </a>
+            <a
+              href={`mailto:${PROPERTY.email}`}
+              className="flex items-center gap-4 p-5 rounded-sm border transition-all hover:-translate-y-0.5 bg-background border-ink/10 hover:border-gerua/40"
+            >
+              <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 bg-muted text-gerua-dark">
+                <Mail size={18} />
+              </div>
+              <div>
+                <div className="text-[10px] tracking-widest-3 text-ink/55 mb-1">EMAIL</div>
+                <div className="font-display text-lg text-ink">{PROPERTY.email}</div>
+              </div>
+            </a>
           </div>
 
           {/* Form */}
@@ -107,8 +138,9 @@ const Contact = () => {
                 SEND ENQUIRY
               </button>
               <a
-                href="#whatsapp"
-                onClick={(e) => { e.preventDefault(); toast({ title: "WhatsApp", description: "Opening chat..." }); }}
+                href={`https://wa.me/${PROPERTY.whatsapp}`}
+                target="_blank"
+                rel="noreferrer"
                 className="text-[11px] tracking-widest-2 text-ink/70 hover:text-gerua-dark underline underline-offset-4 decoration-ink/20"
               >
                 OR WHATSAPP US INSTEAD

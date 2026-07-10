@@ -1,6 +1,6 @@
 import React from "react";
 import { MapPin } from "lucide-react";
-import { LOCATION_STATS } from "../data/site";
+import { LOCATION_STATS, PROPERTY } from "../data/site";
 
 const Location = () => {
   return (
@@ -27,9 +27,9 @@ const Location = () => {
               <div>
                 <div className="text-[10px] tracking-widest-3 text-ink/50 mb-2">ADDRESS</div>
                 <p className="text-ink/85 font-display text-xl leading-snug">
-                  [TO CONFIRM — full street address from Google listing]
+                  {PROPERTY.address}
                 </p>
-                <p className="text-ink/60 text-sm mt-1">[TO CONFIRM — city, state]</p>
+                <p className="text-ink/60 text-sm mt-1">{PROPERTY.city}</p>
               </div>
             </div>
 
@@ -43,25 +43,15 @@ const Location = () => {
             </div>
           </div>
 
-          {/* Map placeholder */}
+          {/* Map */}
           <div className="reveal relative aspect-[4/3] bg-ink/5 rounded-sm overflow-hidden border border-ink/10">
-            <div
-              className="absolute inset-0 bg-cover bg-center opacity-70"
-              style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80')",
-              }}
+            <iframe
+              title="Rivelle Boutique Stays location"
+              src="https://www.google.com/maps?q=Rivelle+Boutique+Stays+Jaipur,+15+A+Ajmer+Rd+Shiv+Marg+Gopalbari+Jaipur&output=embed"
+              className="absolute inset-0 w-full h-full grayscale-[0.15]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-gerua/10 via-transparent to-ink/40" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-background/95 backdrop-blur px-6 py-4 rounded-sm shadow-lg border border-ink/10 flex items-center gap-3">
-                <MapPin size={18} className="text-gerua-dark" />
-                <div>
-                  <div className="font-display text-lg text-ink">Rivelle</div>
-                  <div className="text-[10px] tracking-widest-3 text-ink/60">BOUTIQUE STAYS</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

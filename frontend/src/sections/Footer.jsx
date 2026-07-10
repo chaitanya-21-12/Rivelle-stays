@@ -1,6 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
-import { NAV_LINKS } from "../data/site";
+import { NAV_LINKS, PROPERTY } from "../data/site";
 
 const Footer = () => {
   const scrollTo = (e, href) => {
@@ -52,15 +52,15 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3 text-cream/70">
                 <MapPin size={14} className="text-gerua-glow mt-0.5 flex-shrink-0" />
-                <span>[TO CONFIRM — full street address from Google listing]</span>
+                <span>{PROPERTY.address}, {PROPERTY.city}</span>
               </li>
               <li className="flex items-center gap-3 text-cream/70">
                 <Phone size={14} className="text-gerua-glow flex-shrink-0" />
-                <span>[TO CONFIRM]</span>
+                <a href={`tel:${PROPERTY.phoneRaw}`} className="hover:text-gerua-glow transition-colors">{PROPERTY.phone}</a>
               </li>
               <li className="flex items-center gap-3 text-cream/70">
                 <Mail size={14} className="text-gerua-glow flex-shrink-0" />
-                <span>[OWNER_EMAIL]</span>
+                <a href={`mailto:${PROPERTY.email}`} className="hover:text-gerua-glow transition-colors">{PROPERTY.email}</a>
               </li>
             </ul>
           </div>
