@@ -101,3 +101,55 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: |
+  Building Rivelle Boutique Stays website (Jaipur boutique hotel). Latest bug report:
+  User reported the hero image was stretched ("hero image fat rhi h"). Applied a blurred-backdrop fix
+  which the user did not like — user now requested "revert to last hero". So the hero has been reverted
+  to the previous simple version (object-cover + objectPosition center 30%). Need to verify this revert
+  still renders correctly, no compile errors, and text overlays remain readable.
+
+frontend:
+  - task: "Hero revert to object-cover version"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/sections/Hero.jsx"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: |
+            Reverted Hero.jsx to the prior version: single background image using object-cover with
+            objectPosition center 30%, warm gradient overlays, address chip (GOPALBARI · JAIPUR),
+            large RIVELLE title anchored to bottom, EXPLORE OUR ROOMS + OUR STORY buttons, decorative
+            faint R on the right, scroll-to-discover indicator. HERO_IMAGE points to
+            /photos/property_front.png (actual Rivelle property front). Need testing to confirm:
+            (a) page loads, (b) hero renders full-viewport with the property visible,
+            (c) no console/compile errors, (d) text overlays readable over the image,
+            (e) header nav + BOOK NOW visible, (f) SplashIntro still opens/closes and can be skipped.
+
+metadata:
+  created_by: "main_agent"
+  version: "1.1"
+  test_sequence: 1
+  run_ui: true
+
+test_plan:
+  current_focus:
+    - "Hero revert to object-cover version"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "main"
+      message: |
+        Reverted Hero.jsx per user request ("revert to last hero"). Please verify the hero section
+        loads correctly at multiple viewport widths (1920, 1440, 1024, 768, 375) with the actual
+        property image (/photos/property_front.png) rendered via object-cover + objectPosition
+        "center 30%". Confirm no console errors, header nav, BOOK NOW, EXPLORE OUR ROOMS button,
+        OUR STORY button, address chip, scroll indicator are all present and readable. To bypass
+        the splash screen for testing, run `sessionStorage.setItem('rivelle_splash_seen', '1')`
+        then reload. Report PASS or FAIL with observations and screenshots.
