@@ -10,7 +10,6 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import Header from "./sections/Header";
 import Footer from "./sections/Footer";
-import EnquireFab from "./sections/EnquireFab";
 import { Toaster } from "./components/ui/toaster";
 
 const ScrollToTop = () => {
@@ -65,7 +64,6 @@ function App() {
           </Routes>
         </div>
         <Footer />
-        <EnquireFab />
       </BrowserRouter>
       <Toaster />
     </div>
