@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "../data/site";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  // On home page: transparent until scrolled. On all other pages: always solid.
+  const isHome = pathname === "/";
+  const solid = !isHome || scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -14,10 +19,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
+        solid
           ? "bg-blush/95 backdrop-blur-md py-3 shadow-[0_2px_20px_-8px_rgba(109,30,25,0.25)] border-b border-rose/10"
           : "bg-transparent py-5"
       }`}
@@ -27,14 +33,14 @@ const Header = () => {
         <Link to="/" className="flex items-baseline gap-3">
           <span
             className={`font-display italic text-3xl md:text-4xl leading-none ${
-              scrolled ? "text-rose" : "text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
+              solid ? "text-rose" : "text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
             }`}
           >
             Rivelle
           </span>
           <span
             className={`hidden sm:inline text-[10px] md:text-[11px] tracking-widest-3 font-light ${
-              scrolled ? "text-rose/70" : "text-cream/80"
+              solid ? "text-rose/70" : "text-cream/80"
             }`}
           >
             BOUTIQUE STAYS
@@ -52,7 +58,7 @@ const Header = () => {
                 `nav-link text-[11px] tracking-widest-2 transition-colors ${
                   isActive ? "active" : ""
                 } ${
-                  scrolled
+                  solid
                     ? "text-ink/80 hover:text-rose"
                     : "text-cream/85 hover:text-cream"
                 }`
@@ -74,7 +80,7 @@ const Header = () => {
 
           <button
             aria-label="Toggle menu"
-            className={`lg:hidden p-2 ${scrolled ? "text-ink" : "text-cream"}`}
+            className={`lg:hidden p-2 ${solid ? "text-ink" : "text-cream"}`}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
