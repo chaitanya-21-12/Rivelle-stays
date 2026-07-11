@@ -30,11 +30,6 @@ const Hero = () => {
         <span className="font-display text-[240px] leading-none text-cream/[0.04] select-none">R</span>
       </div>
 
-      {/* Address chip — top right */}
-      <div className="hidden md:flex absolute top-24 right-10 z-10 items-center gap-2 text-cream/70 text-[10px] tracking-widest-3">
-        <span className="w-1.5 h-1.5 rounded-full bg-gerua-glow animate-pulse" />
-        GOPALBARI · JAIPUR
-      </div>
 
       {/* Content */}
       <div className="relative z-10 min-h-[100svh] flex flex-col items-center justify-end pb-24 md:pb-28 px-6 text-center">

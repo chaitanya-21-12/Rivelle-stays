@@ -70,14 +70,6 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            to="/rooms"
-            className="btn-rose hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[11px] tracking-widest-2 font-medium"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-cream/90" />
-            BOOK NOW
-          </Link>
-
           <button
             aria-label="Toggle menu"
             className={`lg:hidden p-2 ${solid ? "text-ink" : "text-cream"}`}
@@ -107,13 +99,6 @@ const Header = () => {
                 {l.label}
               </NavLink>
             ))}
-            <Link
-              to="/rooms"
-              onClick={() => setOpen(false)}
-              className="btn-rose rounded-full px-5 py-3 text-center text-[11px] tracking-widest-2 font-medium mt-2"
-            >
-              BOOK NOW
-            </Link>
           </nav>
         </div>
       )}
