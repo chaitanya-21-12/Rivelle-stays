@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
@@ -11,7 +11,6 @@ import ContactPage from "./pages/ContactPage";
 import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 import EnquireFab from "./sections/EnquireFab";
-import SplashIntro from "./components/SplashIntro";
 import { Toaster } from "./components/ui/toaster";
 
 const ScrollToTop = () => {
@@ -47,32 +46,8 @@ const Reveal = () => {
 };
 
 function App() {
-  const [showSplash, setShowSplash] = useState(() => {
-    // Only show splash once per session
-    if (typeof window === "undefined") return true;
-    return !sessionStorage.getItem("rivelle_splash_seen");
-  });
-
-  useEffect(() => {
-    if (showSplash) {
-      // Lock body scroll during splash
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showSplash]);
-
-  const handleSplashComplete = () => {
-    sessionStorage.setItem("rivelle_splash_seen", "1");
-    setShowSplash(false);
-  };
-
   return (
     <div className="App">
-      {showSplash && <SplashIntro onComplete={handleSplashComplete} />}
       <BrowserRouter>
         <ScrollToTop />
         <Reveal />
