@@ -28,7 +28,7 @@ const Header = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 relative flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-baseline gap-3">
           <span
@@ -38,17 +38,10 @@ const Header = () => {
           >
             Rivelle
           </span>
-          <span
-            className={`hidden sm:inline text-[10px] md:text-[11px] tracking-widest-3 font-light ${
-              solid ? "text-rose/70" : "text-cream/80"
-            }`}
-          >
-            BOUTIQUE STAYS
-          </span>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        {/* Desktop nav — centered absolutely */}
+        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
           {NAV_LINKS.map((l) => (
             <NavLink
               key={l.to}
