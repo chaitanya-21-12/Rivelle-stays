@@ -18,7 +18,7 @@ const Hero = () => {
           src={HERO_IMAGE}
           alt="Rivelle Boutique Stays — the property at dusk"
           className="w-full h-full object-cover ken-burns"
-          style={{ objectPosition: "center 30%" }}
+          style={{ objectPosition: "center center" }}
         />
         {/* Cinematic warm overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/25 to-ink/90" />

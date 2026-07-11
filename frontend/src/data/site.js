@@ -37,8 +37,8 @@ export const NAV_LINKS = [
   { label: "CONTACT", to: "/contact" },
 ];
 
-// Hero: the actual Rivelle property front (dusk shot)
-export const HERO_IMAGE = "/photos/property_front.png";
+// Hero: wide landscape shot — no stretching on desktop
+export const HERO_IMAGE = "/photos/hero_wide.jpg";
 
 export const ROOMS = [
   {
