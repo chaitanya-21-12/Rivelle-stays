@@ -32,9 +32,7 @@ const RoomsPage = () => {
                 <div className="absolute top-4 left-4 bg-ink/70 backdrop-blur text-cream text-[10px] tracking-widest-3 px-3 py-1.5 rounded-full">
                   {r.tag}
                 </div>
-                <div className="absolute bottom-4 right-4 bg-rose text-cream text-[10px] tracking-widest-3 px-3 py-1.5 rounded-full">
-                  ROOM {r.number}
-                </div>
+
               </Link>
 
               {/* Details */}

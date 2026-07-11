@@ -47,9 +47,7 @@ const RoomDetail = () => {
               <div className="absolute top-4 left-4 bg-ink/70 backdrop-blur text-cream text-[10px] tracking-widest-3 px-3 py-1.5 rounded-full">
                 {room.tag}
               </div>
-              <div className="absolute top-4 right-4 bg-rose text-cream text-[10px] tracking-widest-3 px-3 py-1.5 rounded-full">
-                ROOM {room.number}
-              </div>
+
               <button
                 onClick={prev}
                 className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-cream/85 text-rose flex items-center justify-center hover:bg-cream transition-colors"
