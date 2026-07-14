@@ -46,7 +46,7 @@ const Home = () => {
           <div className="reveal relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-25px_rgba(109,30,25,0.35)]">
               <img
-                src={PHOTOS.hall1[0]}
+                src={PHOTOS.hall[0]}
                 alt="Rivelle heritage lounge"
                 className="w-full h-full object-cover"
               />
@@ -127,12 +127,29 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {[...PHOTOS.restaurant.slice(0, 4), ...PHOTOS.hall1.slice(0, 2), ...PHOTOS.hall2.slice(0, 2)].slice(0, 8).map((src, i) => (
-              <div key={i} className={`gallery-item overflow-hidden rounded-sm ${i === 0 ? "md:row-span-2 md:col-span-2 aspect-[16/11]" : "aspect-square"}`}>
-                <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
-              </div>
-            ))}
+          <div className="grid grid-cols-3 gap-3 md:gap-4">
+            {/* Big photo — spans 2 rows on left */}
+            <div className="col-span-2 row-span-2 overflow-hidden rounded-sm gallery-item">
+              <img src={PHOTOS.superDeluxe101[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+            </div>
+            {/* Top right */}
+            <div className="aspect-[4/3] overflow-hidden rounded-sm gallery-item">
+              <img src={PHOTOS.deluxe103[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+            </div>
+            {/* Bottom right */}
+            <div className="aspect-[4/3] overflow-hidden rounded-sm gallery-item">
+              <img src={PHOTOS.deluxe104[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+            </div>
+            {/* Bottom row — 3 equal */}
+            <div className="aspect-[4/3] overflow-hidden rounded-sm gallery-item">
+              <img src={PHOTOS.superDeluxe102[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-sm gallery-item">
+              <img src={PHOTOS.hall[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-sm gallery-item">
+              <img src={PHOTOS.suite201[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+            </div>
           </div>
 
           <div className="text-center mt-10">

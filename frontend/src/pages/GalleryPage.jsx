@@ -6,8 +6,8 @@ import { GALLERY_ALL } from "../data/site";
 const FILTERS = [
   { label: "All", key: "all" },
   { label: "Rooms", key: "ROOM" },
-  { label: "Common Areas", key: "LOUNGE" },
-  { label: "Dining", key: "DINING" },
+  { label: "Common Areas", key: "COMMON" },
+  { label: "In-House Café", key: "CAFÉ" },
 ];
 
 const GalleryPage = () => {

@@ -79,7 +79,7 @@ const RoomDetail = () => {
                       : "opacity-70 hover:opacity-100"
                   }`}
                 >
-                  <img src={p} alt="" className="w-full h-full object-cover" />
+                  <img src={p} alt="" loading="lazy" className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>
@@ -139,7 +139,7 @@ const RoomDetail = () => {
                 to={`/rooms/${r.slug}`}
                 className="group relative aspect-[16/10] rounded-sm overflow-hidden"
               >
-                <img src={r.hero} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]" />
+                <img src={r.hero} alt={r.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="text-[10px] tracking-widest-3 text-gerua-glow mb-2">{r.tag}</div>

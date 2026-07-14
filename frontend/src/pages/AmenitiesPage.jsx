@@ -1,9 +1,9 @@
 import React from "react";
-import { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck, MapPin, Thermometer, Tv, BedDouble, ShowerHead, Coffee, ArrowUpDown, Droplets, Package, Wind } from "lucide-react";
+import { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck, MapPin, Thermometer, Tv, BedDouble, ShowerHead, Coffee, ArrowUpDown, Droplets, Package, Wind, Zap, GlassWater, Laptop, Navigation, Bath } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import { AMENITIES, LOCATION_STATS, PROPERTY, PHOTOS } from "../data/site";
 
-const ICONS = { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck, MapPin, Thermometer, Tv, BedDouble, ShowerHead, Coffee, ArrowUpDown, Droplets, Package, Wind };
+const ICONS = { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck, MapPin, Thermometer, Tv, BedDouble, ShowerHead, Coffee, ArrowUpDown, Droplets, Package, Wind, Zap, GlassWater, Laptop, Navigation, Bath };
 
 const AmenitiesPage = () => {
   return (
@@ -96,7 +96,7 @@ const AmenitiesPage = () => {
             <p className="text-ink/60 text-sm">Breakfast · Lunch · Dinner · Room service (limited hours)</p>
           </div>
           <div className="reveal grid grid-cols-2 gap-3">
-            {PHOTOS.restaurant.slice(0, 4).map((src, i) => (
+            {PHOTOS.hall.slice(0, 4).map((src, i) => (
               <div key={i} className={`overflow-hidden rounded-sm ${i === 0 ? "col-span-2 aspect-[16/10]" : "aspect-square"}`}>
                 <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
               </div>

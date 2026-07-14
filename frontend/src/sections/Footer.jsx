@@ -19,8 +19,13 @@ const Footer = () => {
               feels quietly personal, wherever your journey has taken you.
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <SocialBtn icon={<Instagram size={15} />} />
-              <SocialBtn icon={<Facebook size={15} />} />
+              <SocialBtn href="#" icon={<Instagram size={15} />} />
+              <SocialBtn href="#" icon={<Facebook size={15} />} />
+              <SocialBtn href="#" icon={
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 3.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 2a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 1.75a2.75 2.75 0 1 1 0 5.5 2.75 2.75 0 0 1 0-5.5zm0 1.25a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM6.5 7.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm11 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+              } />
             </div>
           </div>
 
@@ -72,10 +77,12 @@ const Footer = () => {
   );
 };
 
-const SocialBtn = ({ icon }) => (
+const SocialBtn = ({ icon, href = "#" }) => (
   <a
-    href="#s"
-    onClick={(e) => e.preventDefault()}
+    href={href}
+    target={href !== "#" ? "_blank" : undefined}
+    rel="noopener noreferrer"
+    onClick={href === "#" ? (e) => e.preventDefault() : undefined}
     className="w-9 h-9 rounded-full border border-cream/20 flex items-center justify-center text-cream/70 hover:text-cream hover:border-gerua-glow hover:bg-gerua/10 transition-all"
   >
     {icon}

@@ -1,16 +1,23 @@
 // Site data — Rivelle Boutique Stays
-// Property photos hosted on Google Drive (via lh3.googleusercontent.com)
 
-const local = (name) => `/photos/${name}.jpg`;
-
-// Property image collections \u2014 downloaded from Drive, served locally
+// Property image collections — organized by room number
 export const PHOTOS = {
-  room101: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => local(`room101_${n}`)),
-  room102: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => local(`room102_${n}`)),
-  room103: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => local(`room103_${n}`)),
-  hall1: [1, 2, 3, 4, 5].map((n) => local(`hall1_${n}`)),
-  hall2: [1, 2, 3, 4, 5].map((n) => local(`hall2_${n}`)),
-  restaurant: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => local(`rest_${n}`)),
+  // Super Deluxe rooms (101, 102)
+  superDeluxe101: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map((n) => `/photos/superdeluxe_101/sd101_${n}.jpg`),
+  superDeluxe102: [1,2,3,4,5,6,7,8,9,10,11].map((n) => `/photos/superdeluxe_102/sd102_${n}.jpg`),
+
+  // Deluxe rooms (103, 104, 202, 203)
+  deluxe103: [1,2,3,4,5,6,7,8,9,10,11].map((n) => `/photos/deluxe_103/d103_${n}.jpg`),
+  deluxe104: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_104/d104_${n}.jpg`),
+  // 202 & 203 photos — pending Drive access
+  deluxe202: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_103/d103_${n}.jpg`),
+  deluxe203: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_104/d104_${n}.jpg`),
+
+  // Suite (201)
+  suite201: [1,2,3,4,5,6,7].map((n) => `/photos/suite_201/s201_${n}.jpg`),
+
+  // Common areas
+  hall: [1,2,3,4,5].map((n) => `/photos/hall/hall_${n}.jpg`),
 };
 
 export const PROPERTY = {
@@ -20,7 +27,7 @@ export const PROPERTY = {
   city: "Jaipur, Rajasthan 302001, India",
   phone: "+91 86195 53323",
   phoneRaw: "+918619553323",
-  email: "hello@rivellestays.com",
+  email: "info@rivellestays.com",
   website: "www.rivellestays.com",
   rating: "5.0",
   reviews: 9,
@@ -43,15 +50,15 @@ export const HERO_IMAGE = "/photos/hero_wide.jpg";
 export const ROOMS = [
   {
     slug: "deluxe",
-    number: "101",
-    tag: "WARM \u00b7 COMFORTABLE",
+    numbers: ["103", "104", "202", "203"],
+    tag: "WARM · COMFORTABLE",
     name: "Deluxe Room",
-    photos: PHOTOS.room101,
-    hero: PHOTOS.room101[0],
+    photos: [...PHOTOS.deluxe103, ...PHOTOS.deluxe104].slice(0, 12),
+    hero: PHOTOS.deluxe103[0],
     shortDesc:
-      "Our signature room \u2014 hand-block textiles, a plush bed and just enough craft detail to feel far from ordinary.",
+      "Our signature room — warm interiors, a plush bed and just enough craft detail to feel far from ordinary.",
     longDesc:
-      "Our Deluxe Room is where quiet luxury begins. Draped in hand-block prints and warm cream tones, this room features a plush king bed, a private sit-out with tea service, and thoughtful touches like a curated welcome tray. It's the perfect first taste of gerua warmth \u2014 intimate, honest, and full of Jaipur soul.",
+      "Our Deluxe Rooms are where quiet luxury begins. Draped in warm tones with modern interiors, each room features a plush bed, premium bedding, an attached bathroom and thoughtful in-room touches. It's the perfect first taste of gerua warmth — intimate, honest, and full of Jaipur soul.",
     size: "180 sq ft",
     bed: "King / Twin",
     occupancy: "2 guests",
@@ -59,27 +66,27 @@ export const ROOMS = [
     priceHint: "PER NIGHT · TAXES EXTRA",
     features: [
       "Air conditioning",
-      "Flat-screen TV with Netflix",
+      "Smart TV with streaming",
       "High-speed WiFi",
-      "Attached bathroom with hot water",
-      "Work desk",
-      "Tea / coffee maker",
+      "En-suite bathroom with hot water",
+      "Tea & coffee kettle",
       "Wardrobe & luggage rack",
+      "Premium bedding & pillows",
       "Daily housekeeping",
-      "Room service (limited hours)",
+      "Complimentary drinking water",
     ],
   },
   {
     slug: "super-deluxe",
-    number: "102",
-    tag: "ELEVATED \u00b7 PREMIUM",
+    numbers: ["101", "102"],
+    tag: "ELEVATED · PREMIUM",
     name: "Super Deluxe Room",
-    photos: PHOTOS.room102,
-    hero: PHOTOS.room102[0],
+    photos: [...PHOTOS.superDeluxe101, ...PHOTOS.superDeluxe102].slice(0, 12),
+    hero: PHOTOS.superDeluxe101[0],
     shortDesc:
-      "A more spacious sanctuary with a seating nook, a curated view and a few extra thoughtful touches for longer stays.",
+      "A more spacious sanctuary with premium furnishings, a curated ambiance and a few extra thoughtful touches for longer stays.",
     longDesc:
-      "Wrapped in terracotta hand-block panels and warm lamp glow, our Super Deluxe Room is a slower kind of luxury. A carved wooden bed, a private seating corner, framed miniature art and generous natural light make this room ideal for couples, longer stays, or anyone who wants a little more room to unwind.",
+      "Our Super Deluxe Rooms offer a slower kind of luxury. Larger than our Deluxe rooms, they feature premium furnishings, a generous layout, framed wall art and a calm atmosphere ideal for couples, business travellers or anyone who wants a little more room to unwind.",
     size: "240 sq ft",
     bed: "King",
     occupancy: "2 guests + 1 extra",
@@ -87,26 +94,25 @@ export const ROOMS = [
     priceHint: "PER NIGHT · TAXES EXTRA",
     features: [
       "Everything in Deluxe",
-      "Mini-fridge",
-      "Private seating area",
+      "Larger floor space",
       "Premium bath toiletries",
-      "Better courtyard view",
+      "Enhanced room décor",
       "In-room safe",
       "Bathrobe & slippers",
-      "Daily fresh water",
+      "Priority housekeeping",
     ],
   },
   {
     slug: "suite",
-    number: "103",
-    tag: "SIGNATURE \u00b7 SUITE",
+    numbers: ["201"],
+    tag: "SIGNATURE · SUITE",
     name: "The Suite",
-    photos: PHOTOS.room103,
-    hero: PHOTOS.room103[0],
+    photos: PHOTOS.suite201,
+    hero: PHOTOS.suite201[0],
     shortDesc:
-      "Our most spacious retreat \u2014 a separate living area, the property's finest view and a slow, cinematic sense of arrival.",
+      "Our most spacious retreat — a separate living area, the property's finest view and a slow, cinematic sense of arrival.",
     longDesc:
-      "The Suite is our showpiece. A hand-painted feature wall, a four-poster carved bed, a separate living area and the property's best natural light. Designed for slow mornings, quiet celebrations and long stays that deserve to feel like an occasion.",
+      "The Suite is our showpiece. A four-poster bed, a separate living area, the property's best natural light and a premium bath experience. Designed for slow mornings, quiet celebrations and long stays that deserve to feel like an occasion.",
     size: "320 sq ft",
     bed: "King, four-poster",
     occupancy: "2 guests + 2 extra",
@@ -116,9 +122,8 @@ export const ROOMS = [
       "Everything in Super Deluxe",
       "Separate living area",
       "Bathtub / premium bath",
-      "Private balcony access",
-      "Welcome amenities",
       "Best view in the house",
+      "Welcome amenities on arrival",
       "Curated art & artefacts",
       "Priority housekeeping",
     ],
@@ -128,25 +133,25 @@ export const ROOMS = [
 export const AMENITIES = [
   { name: "24×7 Front Desk", note: "ALWAYS ON DUTY", icon: "Clock", desc: "Our team is available around the clock — for late arrivals, early check-outs, and everything in between." },
   { name: "In-house Café & Dining", note: "ALL-DAY MENU", icon: "UtensilsCrossed", desc: "Indian and international cuisine served all day — from home-style breakfasts to pizzas, artisan coffee and more." },
-  { name: "Specialty Coffee", note: "BARISTA-CRAFTED", icon: "Coffee", desc: "Espresso, cappuccino, cold brews and seasonal specials — made with premium beans, served with care." },
-  { name: "Premium Bedding", note: "FOR A RESTFUL NIGHT", icon: "BedDouble", desc: "High-quality mattresses, fresh linen and soft pillows — everything in place for a deep, uninterrupted sleep." },
-  { name: "En-Suite Bathrooms", note: "HOT & COLD WATER", icon: "ShowerHead", desc: "Clean, modern bathrooms with premium fittings, fresh towels and complimentary toiletries in every room." },
-  { name: "Secure Stay", note: "CCTV · SECURE ACCESS", icon: "ShieldCheck", desc: "CCTV in all common areas, secure room locks and attentive staff — your safety is always our priority." },
-  { name: "High-speed WiFi", note: "COMPLIMENTARY THROUGHOUT", icon: "Wifi", desc: "Fast, reliable WiFi in every room and common area — perfect for working, streaming or staying in touch." },
-  { name: "Air Conditioning", note: "ALL ROOMS", icon: "Thermometer", desc: "Powerful air conditioning in every room, keeping you comfortable through Jaipur's warm seasons." },
-  { name: "Smart TV", note: "STREAMING READY", icon: "Tv", desc: "Flat-screen Smart TVs with access to your favourite movies, shows and streaming services." },
-  { name: "Daily Housekeeping", note: "TURN-DOWN ON REQUEST", icon: "Sparkles", desc: "Rooms refreshed every day. Linen changes and turn-down service available on request." },
-  { name: "Tea & Coffee Station", note: "IN-ROOM", icon: "Coffee", desc: "An electric kettle with complimentary tea, coffee and refreshments in every room, whenever you want them." },
-  { name: "Premium Toiletries", note: "COMPLIMENTARY", icon: "Droplets", desc: "Shampoo, body wash, soap, dental kit, shower cap and essentials — provided and replenished daily." },
-  { name: "Complimentary Water", note: "FRESH DAILY", icon: "Droplets", desc: "Fresh bottled drinking water in every room, restocked as needed throughout your stay." },
-  { name: "Wardrobe & Storage", note: "SPACIOUS", icon: "Package", desc: "Generously sized wardrobes with hangers and shelving — ample room for longer stays and larger bags." },
-  { name: "Elevator Access", note: "ALL FLOORS", icon: "ArrowUpDown", desc: "A modern lift connects all floors — convenient for guests of every age and for handling luggage with ease." },
-  { name: "Power Backup", note: "24×7", icon: "BatteryCharging", desc: "Uninterrupted power throughout — your stay never skips a beat, even during grid outages." },
-  { name: "On-site Parking", note: "COMPLIMENTARY", icon: "Car", desc: "Secure, free parking on-site for the full length of your stay — no hidden charges." },
-  { name: "Prime Location", note: "CITY CENTRE", icon: "MapPin", desc: "In the heart of Jaipur — top attractions, markets, restaurants and transport hubs all within easy reach." },
-  { name: "Work-friendly Spaces", note: "RELIABLE & QUIET", icon: "Wifi", desc: "Comfortable seating, fast WiFi and a peaceful atmosphere — everything a remote worker or business traveller needs." },
-  { name: "Airport Transfers", note: "ON REQUEST", icon: "Plane", desc: "Chauffeured pickup and drop-off from Jaipur Airport — arranged in advance, so you arrive without a worry." },
-  { name: "Taxi & Sightseeing", note: "ON REQUEST", icon: "MapPin", desc: "We help arrange reliable local taxis, city tours and transport for exploring Jaipur at your own pace." },
+  { name: "Specialty Coffee", note: "ARTISAN BREWS", icon: "Coffee", desc: "Freshly brewed pour-overs, cold brews and chai — served at our café or delivered to your room." },
+  { name: "Premium Bedding", note: "HOTEL-GRADE LINEN", icon: "BedDouble", desc: "High-thread-count cotton sheets, plush pillows and a duvet that makes mornings difficult to leave." },
+  { name: "En-Suite Bathrooms", note: "PRIVATE & WELL-FITTED", icon: "Bath", desc: "Every room has its own private bathroom with 24-hour hot water, rain shower and quality fixtures." },
+  { name: "Secure Stay", note: "YOUR SAFETY, FIRST", icon: "ShieldCheck", desc: "CCTV throughout, secure key-card access and a team trained in guest safety protocols." },
+  { name: "High-speed WiFi", note: "COMPLIMENTARY", icon: "Wifi", desc: "Fast, reliable internet available throughout the property — strong signal in every room and common area." },
+  { name: "Air Conditioning", note: "IN EVERY ROOM", icon: "Wind", desc: "Individual climate control in all rooms — so Jaipur's summers and winters never get in the way of a good night's rest." },
+  { name: "Smart TV", note: "WITH STREAMING", icon: "Tv", desc: "Flat-screen Smart TVs with access to your favourite streaming apps — Netflix, Prime and more." },
+  { name: "Daily Housekeeping", note: "FRESH EVERY DAY", icon: "Sparkles", desc: "Your room is serviced each morning — fresh towels, made beds and a clean space to return to." },
+  { name: "Tea & Coffee Station", note: "IN-ROOM", icon: "Coffee", desc: "An in-room kettle with a curated selection of teas, instant coffee and condiments, refreshed daily." },
+  { name: "Premium Toiletries", note: "QUALITY ESSENTIALS", icon: "Droplets", desc: "Thoughtfully selected bath products — shampoo, conditioner, body wash and moisturiser — in every bathroom." },
+  { name: "Complimentary Water", note: "ALWAYS STOCKED", icon: "GlassWater", desc: "Chilled bottled water replenished daily in your room — because staying hydrated should never require a trip to the lobby." },
+  { name: "Wardrobe & Storage", note: "AMPLE SPACE", icon: "Package", desc: "A full wardrobe with hangers, shelving and a luggage rack — so unpacking actually feels worth it." },
+  { name: "Elevator Access", note: "ALL FLOORS", icon: "ArrowUpDown", desc: "A lift connects all floors — for guests with heavy luggage or anyone who'd simply rather not take the stairs." },
+  { name: "Power Backup", note: "UNINTERRUPTED", icon: "Zap", desc: "Generator backup ensures uninterrupted power to all rooms and common areas — no surprises during peak Jaipur summers." },
+  { name: "On-site Parking", note: "COMPLIMENTARY", icon: "Car", desc: "Dedicated parking available on the property for guests arriving by personal vehicle or rental." },
+  { name: "Prime Location", note: "CITY CENTRE ADJACENT", icon: "MapPin", desc: "Situated minutes from Jaipur's major landmarks — a practical base for sightseeing, dining and business." },
+  { name: "Work-friendly Spaces", note: "DESK IN EVERY ROOM", icon: "Laptop", desc: "A dedicated work desk and reliable WiFi in every room — designed for the guest who needs to stay productive." },
+  { name: "Airport Transfers", note: "ON REQUEST", icon: "Plane", desc: "Coordinated airport pick-up and drop-off on request — ask our team at least a few hours in advance." },
+  { name: "Taxi & Sightseeing", note: "ON REQUEST", icon: "Navigation", desc: "We'll arrange trusted local drivers for day trips, city tours or intercity travel — just let us know." },
   { name: "Luggage Storage", note: "BEFORE & AFTER CHECKOUT", icon: "Package", desc: "Store your bags safely before check-in or after check-out — so the city is yours to explore freely." },
   { name: "Laundry Service", note: "ON REQUEST", icon: "Sparkles", desc: "Laundry and ironing available on request — particularly handy for business travellers and longer stays." },
   { name: "Hair Dryer", note: "ON REQUEST", icon: "Wind", desc: "Available in selected rooms or on request — a small convenience that makes a noticeable difference." },
@@ -161,10 +166,11 @@ export const LOCATION_STATS = [
 ];
 
 export const GALLERY_ALL = [
-  ...PHOTOS.room101.slice(0, 4).map((src) => ({ src, caption: "DELUXE ROOM" })),
-  ...PHOTOS.room102.slice(0, 4).map((src) => ({ src, caption: "SUPER DELUXE ROOM" })),
-  ...PHOTOS.room103.slice(0, 4).map((src) => ({ src, caption: "THE SUITE" })),
-  ...PHOTOS.hall1.slice(0, 3).map((src) => ({ src, caption: "HERITAGE LOUNGE" })),
-  ...PHOTOS.hall2.slice(0, 3).map((src) => ({ src, caption: "COMMON LOUNGE" })),
-  ...PHOTOS.restaurant.slice(0, 4).map((src) => ({ src, caption: "DINING HALL" })),
+  ...PHOTOS.superDeluxe101.slice(0, 4).map((src) => ({ src, caption: "SUPER DELUXE ROOM" })),
+  ...PHOTOS.superDeluxe102.slice(0, 4).map((src) => ({ src, caption: "SUPER DELUXE ROOM" })),
+  ...PHOTOS.deluxe103.slice(0, 4).map((src) => ({ src, caption: "DELUXE ROOM" })),
+  ...PHOTOS.deluxe104.slice(0, 4).map((src) => ({ src, caption: "DELUXE ROOM" })),
+  ...PHOTOS.suite201.slice(0, 4).map((src) => ({ src, caption: "THE SUITE ROOM" })),
+  ...PHOTOS.hall.slice(0, 3).map((src) => ({ src, caption: "COMMON AREAS" })),
+  ...PHOTOS.hall.slice(3, 5).map((src) => ({ src, caption: "IN-HOUSE CAFÉ" })),
 ];
