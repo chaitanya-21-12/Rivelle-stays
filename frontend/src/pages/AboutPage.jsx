@@ -45,14 +45,7 @@ const AboutPage = () => {
               </p>
             </div>
 
-            <div className="mt-10 flex items-center gap-3 flex-wrap">
-              <div className="flex items-center gap-2 text-[11px] tracking-widest-2 text-rose bg-cream/70 rounded-full px-4 py-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={12} className="fill-gerua text-gerua" />)}
-                </div>
-                {PROPERTY.rating} · {PROPERTY.reviews} GOOGLE REVIEWS
-              </div>
-            </div>
+
           </div>
 
           <div className="reveal relative">

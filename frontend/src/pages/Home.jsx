@@ -39,14 +39,7 @@ const Home = () => {
               >
                 READ OUR STORY <ArrowRight size={14} />
               </Link>
-              <div className="flex items-center gap-2 text-[11px] tracking-widest-2 text-rose/80">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={13} className="fill-gerua text-gerua" />
-                  ))}
-                </div>
-                {PROPERTY.rating} · {PROPERTY.reviews} GOOGLE REVIEWS
-              </div>
+
             </div>
           </div>
 

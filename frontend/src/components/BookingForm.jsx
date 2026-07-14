@@ -82,7 +82,7 @@ const BookingForm = ({ room }) => {
             >
               –
             </button>
-            <div className="flex-1 field-warm text-center font-display text-lg">
+            <div className="flex-1 field-warm text-center font-num text-lg">
               {guests}
             </div>
             <button
@@ -151,7 +151,7 @@ const BookingForm = ({ room }) => {
         {/* Nights summary */}
         <div className="flex items-center justify-between text-[12px] pt-3 border-t border-rose/15">
           <span className="text-ink/60">Total nights</span>
-          <span className="font-display text-lg text-rose">{nights || "—"}</span>
+          <span className="font-num text-lg text-rose">{nights || "—"}</span>
         </div>
 
         {/* Submit */}

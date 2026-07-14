@@ -47,6 +47,8 @@ code {
 }
 
 .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+/* Numbers use Inter for clean readability */
+.font-num { font-family: 'Inter', -apple-system, sans-serif; font-variant-numeric: tabular-nums; }
 
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }

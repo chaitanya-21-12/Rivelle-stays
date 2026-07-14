@@ -22,19 +22,17 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        solid
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${solid
           ? "bg-blush/95 backdrop-blur-md py-3 shadow-[0_2px_20px_-8px_rgba(109,30,25,0.25)] border-b border-rose/10"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-baseline gap-3">
           <span
-            className={`font-display italic text-3xl md:text-4xl leading-none ${
-              solid ? "text-rose" : "text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
-            }`}
+            className={`font-display italic text-3xl md:text-4xl leading-none ${solid ? "text-rose" : "text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
+              }`}
           >
             Rivelle
           </span>
@@ -48,12 +46,10 @@ const Header = () => {
               to={l.to}
               end={l.to === "/"}
               className={({ isActive }) =>
-                `nav-link text-[11px] tracking-widest-2 transition-colors ${
-                  isActive ? "active" : ""
-                } ${
-                  solid
-                    ? "text-ink/80 hover:text-rose"
-                    : "text-cream/85 hover:text-cream"
+                `nav-link text-[11px] tracking-widest-2 transition-colors ${isActive ? "active" : ""
+                } ${solid
+                  ? "text-ink/80 hover:text-rose"
+                  : "text-cream/85 hover:text-cream"
                 }`
               }
             >
@@ -84,8 +80,7 @@ const Header = () => {
                 end={l.to === "/"}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-[12px] tracking-widest-2 py-1.5 ${
-                    isActive ? "text-rose font-semibold" : "text-ink/80"
+                  `text-[12px] tracking-widest-2 py-1.5 ${isActive ? "text-rose font-semibold" : "text-ink/80"
                   }`
                 }
               >

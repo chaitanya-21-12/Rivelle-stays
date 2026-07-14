@@ -63,7 +63,7 @@ const AmenitiesPage = () => {
                 {LOCATION_STATS.map((s) => (
                   <div key={s.label}>
                     <div className="text-[10px] tracking-widest-3 text-ink/50 mb-1">{s.label}</div>
-                    <div className="font-display text-xl text-rose">{s.value}</div>
+                    <div className="font-num text-xl text-rose">{s.value}</div>
                   </div>
                 ))}
               </div>

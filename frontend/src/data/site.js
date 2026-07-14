@@ -55,8 +55,8 @@ export const ROOMS = [
     size: "180 sq ft",
     bed: "King / Twin",
     occupancy: "2 guests",
-    priceLabel: "On Request",
-    priceHint: "CONTACT FOR TARIFF",
+    priceLabel: "₹3,500 / night",
+    priceHint: "PER NIGHT · TAXES EXTRA",
     features: [
       "Air conditioning",
       "Flat-screen TV with Netflix",
@@ -83,8 +83,8 @@ export const ROOMS = [
     size: "240 sq ft",
     bed: "King",
     occupancy: "2 guests + 1 extra",
-    priceLabel: "On Request",
-    priceHint: "CONTACT FOR TARIFF",
+    priceLabel: "₹4,500 / night",
+    priceHint: "PER NIGHT · TAXES EXTRA",
     features: [
       "Everything in Deluxe",
       "Mini-fridge",
@@ -110,8 +110,8 @@ export const ROOMS = [
     size: "320 sq ft",
     bed: "King, four-poster",
     occupancy: "2 guests + 2 extra",
-    priceLabel: "On Request",
-    priceHint: "CONTACT FOR TARIFF",
+    priceLabel: "₹6,500 / night",
+    priceHint: "PER NIGHT · TAXES EXTRA",
     features: [
       "Everything in Super Deluxe",
       "Separate living area",

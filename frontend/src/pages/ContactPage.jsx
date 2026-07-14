@@ -75,7 +75,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <div className="text-[10px] tracking-widest-3 text-ink/55 mb-1">PHONE</div>
-                <div className="font-display text-lg text-ink">{PROPERTY.phone}</div>
+                <div className="font-num text-lg text-ink">{PROPERTY.phone}</div>
               </div>
             </a>
             <a href={`mailto:${PROPERTY.email}`} className="flex items-center gap-4 p-5 rounded-sm border transition-all hover:-translate-y-0.5 bg-cream/70 border-rose/10 hover:border-rose/40">
@@ -84,7 +84,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <div className="text-[10px] tracking-widest-3 text-ink/55 mb-1">EMAIL</div>
-                <div className="font-display text-lg text-ink">{PROPERTY.email}</div>
+                <div className="font-num text-lg text-ink">{PROPERTY.email}</div>
               </div>
             </a>
 
@@ -110,7 +110,7 @@ const ContactPage = () => {
               {LOCATION_STATS.map((s) => (
                 <div key={s.label} className="p-4 rounded-sm bg-cream/50 border border-rose/10">
                   <div className="text-[9px] tracking-widest-3 text-ink/50 mb-1">{s.label}</div>
-                  <div className="font-display text-lg text-rose">{s.value}</div>
+                  <div className="font-num text-lg text-rose">{s.value}</div>
                 </div>
               ))}
             </div>
