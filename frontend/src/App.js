@@ -29,13 +29,13 @@ const Reveal = () => {
           if (entry.isIntersecting) entry.target.classList.add("in");
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0, rootMargin: "0px 0px -40px 0px" }
     );
     const attach = () => {
       document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     };
-    // Run after each route change
-    const t = setTimeout(attach, 60);
+    // Small timeout to let DOM render, then attach
+    const t = setTimeout(attach, 30);
     return () => {
       clearTimeout(t);
       observer.disconnect();

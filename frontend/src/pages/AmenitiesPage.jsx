@@ -1,9 +1,9 @@
 import React from "react";
-import { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck, MapPin } from "lucide-react";
+import { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck, MapPin, Thermometer, Tv, BedDouble, ShowerHead, Coffee, ArrowUpDown, Droplets, Package, Wind } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import { AMENITIES, LOCATION_STATS, PROPERTY, PHOTOS } from "../data/site";
 
-const ICONS = { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck };
+const ICONS = { Clock, Wifi, UtensilsCrossed, Sparkles, Car, Plane, BatteryCharging, ShieldCheck, MapPin, Thermometer, Tv, BedDouble, ShowerHead, Coffee, ArrowUpDown, Droplets, Package, Wind };
 
 const AmenitiesPage = () => {
   return (

@@ -49,7 +49,7 @@ code {
 .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
 
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
 .tracking-widest-2 { letter-spacing: 0.28em; }

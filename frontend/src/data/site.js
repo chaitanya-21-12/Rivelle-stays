@@ -126,15 +126,32 @@ export const ROOMS = [
 ];
 
 export const AMENITIES = [
-  { name: "24\u00d77 Front Desk", note: "ALWAYS ON DUTY", icon: "Clock", desc: "Our team is available around the clock \u2014 for late arrivals, early check-outs, and everything in between." },
-  { name: "High-speed WiFi", note: "COMPLIMENTARY IN ALL ROOMS", icon: "Wifi", desc: "Fast, reliable WiFi in every room and common area \u2014 perfect for working, streaming or staying in touch." },
-  { name: "In-house Dining", note: "BREAKFAST \u00b7 \u00c0 LA CARTE", icon: "UtensilsCrossed", desc: "Home-style Indian breakfasts and an \u00e0 la carte menu of comfort favourites, served in our dining hall." },
-  { name: "Daily Housekeeping", note: "TURN-DOWN ON REQUEST", icon: "Sparkles", desc: "Rooms refreshed daily with linen changes on request. Turn-down service available for a nightly ritual." },
-  { name: "On-site Parking", note: "COMPLIMENTARY", icon: "Car", desc: "Secure on-site parking for guests \u2014 free of charge for the length of your stay." },
-  { name: "Airport Pickup", note: "ON REQUEST", icon: "Plane", desc: "Chauffeured pickup from Jaipur International Airport \u2014 just let us know your flight details in advance." },
-  { name: "Power Backup", note: "24\u00d77", icon: "BatteryCharging", desc: "Uninterrupted power so your stay never skips a beat, even during grid outages." },
-  { name: "Secure Stay", note: "CCTV COMMON AREAS", icon: "ShieldCheck", desc: "CCTV surveillance in all common areas and secure locks on every room for your peace of mind." },
+  { name: "24×7 Front Desk", note: "ALWAYS ON DUTY", icon: "Clock", desc: "Our team is available around the clock — for late arrivals, early check-outs, and everything in between." },
+  { name: "In-house Café & Dining", note: "ALL-DAY MENU", icon: "UtensilsCrossed", desc: "Indian and international cuisine served all day — from home-style breakfasts to pizzas, artisan coffee and more." },
+  { name: "Specialty Coffee", note: "BARISTA-CRAFTED", icon: "Coffee", desc: "Espresso, cappuccino, cold brews and seasonal specials — made with premium beans, served with care." },
+  { name: "Premium Bedding", note: "FOR A RESTFUL NIGHT", icon: "BedDouble", desc: "High-quality mattresses, fresh linen and soft pillows — everything in place for a deep, uninterrupted sleep." },
+  { name: "En-Suite Bathrooms", note: "HOT & COLD WATER", icon: "ShowerHead", desc: "Clean, modern bathrooms with premium fittings, fresh towels and complimentary toiletries in every room." },
+  { name: "Secure Stay", note: "CCTV · SECURE ACCESS", icon: "ShieldCheck", desc: "CCTV in all common areas, secure room locks and attentive staff — your safety is always our priority." },
+  { name: "High-speed WiFi", note: "COMPLIMENTARY THROUGHOUT", icon: "Wifi", desc: "Fast, reliable WiFi in every room and common area — perfect for working, streaming or staying in touch." },
+  { name: "Air Conditioning", note: "ALL ROOMS", icon: "Thermometer", desc: "Powerful air conditioning in every room, keeping you comfortable through Jaipur's warm seasons." },
+  { name: "Smart TV", note: "STREAMING READY", icon: "Tv", desc: "Flat-screen Smart TVs with access to your favourite movies, shows and streaming services." },
+  { name: "Daily Housekeeping", note: "TURN-DOWN ON REQUEST", icon: "Sparkles", desc: "Rooms refreshed every day. Linen changes and turn-down service available on request." },
+  { name: "Tea & Coffee Station", note: "IN-ROOM", icon: "Coffee", desc: "An electric kettle with complimentary tea, coffee and refreshments in every room, whenever you want them." },
+  { name: "Premium Toiletries", note: "COMPLIMENTARY", icon: "Droplets", desc: "Shampoo, body wash, soap, dental kit, shower cap and essentials — provided and replenished daily." },
+  { name: "Complimentary Water", note: "FRESH DAILY", icon: "Droplets", desc: "Fresh bottled drinking water in every room, restocked as needed throughout your stay." },
+  { name: "Wardrobe & Storage", note: "SPACIOUS", icon: "Package", desc: "Generously sized wardrobes with hangers and shelving — ample room for longer stays and larger bags." },
+  { name: "Elevator Access", note: "ALL FLOORS", icon: "ArrowUpDown", desc: "A modern lift connects all floors — convenient for guests of every age and for handling luggage with ease." },
+  { name: "Power Backup", note: "24×7", icon: "BatteryCharging", desc: "Uninterrupted power throughout — your stay never skips a beat, even during grid outages." },
+  { name: "On-site Parking", note: "COMPLIMENTARY", icon: "Car", desc: "Secure, free parking on-site for the full length of your stay — no hidden charges." },
+  { name: "Prime Location", note: "CITY CENTRE", icon: "MapPin", desc: "In the heart of Jaipur — top attractions, markets, restaurants and transport hubs all within easy reach." },
+  { name: "Work-friendly Spaces", note: "RELIABLE & QUIET", icon: "Wifi", desc: "Comfortable seating, fast WiFi and a peaceful atmosphere — everything a remote worker or business traveller needs." },
+  { name: "Airport Transfers", note: "ON REQUEST", icon: "Plane", desc: "Chauffeured pickup and drop-off from Jaipur Airport — arranged in advance, so you arrive without a worry." },
+  { name: "Taxi & Sightseeing", note: "ON REQUEST", icon: "MapPin", desc: "We help arrange reliable local taxis, city tours and transport for exploring Jaipur at your own pace." },
+  { name: "Luggage Storage", note: "BEFORE & AFTER CHECKOUT", icon: "Package", desc: "Store your bags safely before check-in or after check-out — so the city is yours to explore freely." },
+  { name: "Laundry Service", note: "ON REQUEST", icon: "Sparkles", desc: "Laundry and ironing available on request — particularly handy for business travellers and longer stays." },
+  { name: "Hair Dryer", note: "ON REQUEST", icon: "Wind", desc: "Available in selected rooms or on request — a small convenience that makes a noticeable difference." },
 ];
+
 
 export const LOCATION_STATS = [
   { label: "Jaipur Airport", value: "12 km" },
