@@ -61,7 +61,7 @@ const BookingForm = ({ room }) => {
           <div className="font-display text-2xl md:text-3xl text-rose">{room.priceLabel}</div>
           <div className="text-[10px] tracking-widest-3 text-ink/50 mt-1">{room.priceHint}</div>
         </div>
-        <div className="flex items-center gap-1.5 text-rose bg-rose/10 rounded-full px-3 py-1.5">
+        <div className="flex items-center gap-1.5 text-rose bg-rose/10 rounded-full px-3 py-1.5 flex-shrink-0 whitespace-nowrap">
           <Bed size={12} />
           <span className="text-[10px] tracking-widest-2 font-medium">{room.bed}</span>
         </div>
@@ -97,7 +97,7 @@ const BookingForm = ({ room }) => {
         </div>
 
         {/* Dates */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label className="flex items-center gap-2 text-[10px] tracking-widest-3 text-ink/55 mb-2">
               <Calendar size={12} /> CHECK-IN
