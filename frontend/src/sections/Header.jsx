@@ -29,12 +29,22 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-baseline gap-3">
+        <Link to="/" className="flex flex-col items-center leading-none gap-1">
           <span
-            className={`font-display italic text-3xl md:text-4xl leading-none ${solid ? "text-rose" : "text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
-              }`}
+            className={`font-display text-xl md:text-2xl tracking-[0.25em] font-light ${
+              solid ? "text-rose" : "text-cream drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+            }`}
           >
-            Rivelle
+            RIVELLE
+          </span>
+          <span
+            className={`flex items-center gap-1.5 text-[9px] md:text-[10px] tracking-[0.3em] font-light ${
+              solid ? "text-rose/70" : "text-cream/80"
+            }`}
+          >
+            <span>—</span>
+            <span>BOUTIQUE STAYS</span>
+            <span>—</span>
           </span>
         </Link>
 
