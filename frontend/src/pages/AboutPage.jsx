@@ -51,10 +51,10 @@ const AboutPage = () => {
           <div className="reveal relative">
             <div className="grid grid-cols-2 gap-3">
               <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                <img src={PHOTOS.hall[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+                <img src="/photos/property_front.png" alt="Rivelle Boutique Stays exterior" loading="lazy" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-[3/4] overflow-hidden rounded-sm mt-10">
-                <img src={PHOTOS.superDeluxe101[0]} alt="" loading="lazy" className="w-full h-full object-cover" />
+                <img src="/photos/rest_1.jpg" alt="Rivelle in-house dining" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
