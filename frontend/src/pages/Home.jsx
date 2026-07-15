@@ -46,8 +46,8 @@ const Home = () => {
           <div className="reveal relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-25px_rgba(109,30,25,0.35)]">
               <img
-                src={PHOTOS.hall[0]}
-                alt="Rivelle heritage lounge"
+                src="/photos/property_front.png"
+                alt="Rivelle Boutique Stays"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-transparent" />
