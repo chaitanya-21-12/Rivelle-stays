@@ -54,16 +54,21 @@ const GalleryPage = () => {
       {/* Grid */}
       <section className="pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
             {filtered.map((g, i) => (
               <button
                 key={i}
                 onClick={() => openAt(i)}
-                className="gallery-item relative overflow-hidden rounded-sm aspect-square group"
+                className="gallery-item relative overflow-hidden rounded-sm group w-full break-inside-avoid block"
               >
-                <img src={g.src} alt={g.caption} loading="lazy" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-0 left-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <img 
+                  src={g.src} 
+                  alt={g.caption} 
+                  loading="lazy" 
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[1.5s]" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="text-[9px] tracking-widest-3 text-cream">{g.caption}</div>
                 </div>
               </button>
