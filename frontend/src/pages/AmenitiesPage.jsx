@@ -39,23 +39,43 @@ const AmenitiesPage = () => {
 
       {/* Dining teaser */}
       <section className="py-24 md:py-32 bg-blush">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-14 items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
           <div className="reveal">
-            <div className="text-[11px] tracking-widest-3 text-rose mb-4">IN-HOUSE DINING</div>
-            <h2 className="font-display text-4xl md:text-5xl text-ink mb-5">Home-style Indian, <span className="italic text-rose">served warm.</span></h2>
-            <p className="text-ink/75 leading-relaxed mb-5">
-              Our dining hall serves a home-style Indian breakfast and an à la carte menu of
-              comfort favourites throughout the day. Ask us about local recommendations —
-              our team knows Jaipur’s best places for chai, dinner and everything in between.
-            </p>
-            <p className="text-ink/60 text-sm">Breakfast · Lunch · Dinner · Room service (limited hours)</p>
+            <div className="ornament-line text-[11px] tracking-widest-3 text-rose mb-6 max-w-[220px]">
+              <span>IN-HOUSE DINING</span>
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ink mb-6 leading-[1.05]">
+              Home-style Indian,
+              <br />
+              <span className="italic text-rose">served warm.</span>
+            </h2>
+            <div className="space-y-4 text-ink/75 leading-relaxed mb-8">
+              <p>
+                Our dining room serves a home-style Indian breakfast and an à la carte menu of comfort favourites throughout the day.
+              </p>
+              <p>
+                Ask us about local recommendations — our team knows Jaipur’s best places for chai, dinner and everything in between.
+              </p>
+            </div>
+            <div className="inline-flex flex-col gap-1.5 pt-6 border-t border-rose/15">
+              <div className="text-[10px] tracking-widest-3 text-ink/50">TIMINGS</div>
+              <p className="text-ink/80 text-sm font-medium">Breakfast · Lunch · Dinner</p>
+              <p className="text-ink/60 text-xs italic">Room service available during limited hours</p>
+            </div>
           </div>
-          <div className="reveal grid grid-cols-2 gap-3">
-            {PHOTOS.hall.slice(0, 4).map((src, i) => (
-              <div key={i} className={`overflow-hidden rounded-sm ${i === 0 ? "col-span-2 aspect-[16/10]" : "aspect-square"}`}>
-                <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
-              </div>
-            ))}
+          
+          <div className="reveal relative">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-25px_rgba(109,30,25,0.35)]">
+              <img 
+                src="/photos/rest_1.jpg" 
+                alt="Rivelle in-house dining" 
+                loading="lazy" 
+                className="w-full h-full object-cover" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-transparent" />
+            </div>
+            <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-24 h-24 border border-rose/40" />
+            <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-24 h-24 border border-rose/40" />
           </div>
         </div>
       </section>
