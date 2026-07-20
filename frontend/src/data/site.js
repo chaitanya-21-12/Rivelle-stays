@@ -14,7 +14,7 @@ export const PHOTOS = {
   deluxe203: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_104/d104_${n}.webp`),
 
   // Suite (201)
-  suite201: [1,2,3,4,5,6,7].map((n) => `/photos/suite_201/s201_${n}.webp`),
+  suite201: [2,1,3,4,5,6,7].map((n) => `/photos/suite_201/s201_${n}.webp`),
 
   // Common areas
   hall: [1,2,3,4,5].map((n) => `/photos/hall/hall_${n}.webp`),
