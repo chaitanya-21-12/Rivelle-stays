@@ -50,7 +50,7 @@ const AboutPage = () => {
               </p>
               <div className="pt-5 border-t border-rose/15">
                 <p className="italic text-ink/80">We can't wait to welcome you.</p>
-                <p className="font-medium text-rose mt-1">— Jai &amp; Pragya</p>
+                <p className="font-display tracking-widest text-rose mt-1 text-lg">— JAI &amp; PRAGYA</p>
               </div>
             </div>
           </div>
