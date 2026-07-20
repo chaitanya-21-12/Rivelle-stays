@@ -34,7 +34,7 @@ const Home = () => {
             </div>
             <div className="mt-10 flex items-center gap-4 flex-wrap">
               <Link
-                to="/about"
+                to="/our-story"
                 className="btn-outline-rose inline-flex items-center gap-2 rounded-full px-6 py-3 text-[11px] tracking-widest-2 font-medium"
               >
                 READ OUR STORY <ArrowRight size={14} />

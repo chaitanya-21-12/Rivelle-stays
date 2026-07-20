@@ -59,6 +59,7 @@ function App() {
             <Route path="/amenities" element={<AmenitiesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/our-story" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<Home />} />
           </Routes>

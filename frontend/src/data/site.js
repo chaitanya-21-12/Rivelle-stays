@@ -40,7 +40,7 @@ export const PROPERTY = {
 
 export const NAV_LINKS = [
   { label: "HOME", to: "/" },
-  { label: "OUR STORY", to: "/about" },
+  { label: "OUR STORY", to: "/our-story" },
   { label: "ROOMS", to: "/rooms" },
   { label: "AMENITIES", to: "/amenities" },
   { label: "GALLERY", to: "/gallery" },

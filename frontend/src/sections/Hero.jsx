@@ -62,7 +62,7 @@ const Hero = () => {
               EXPLORE OUR ROOMS <ArrowRight size={14} />
             </Link>
             <Link
-              to="/about"
+              to="/our-story"
               className="btn-outline-cream inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[11px] tracking-widest-2"
             >
               OUR STORY
