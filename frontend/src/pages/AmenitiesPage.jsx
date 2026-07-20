@@ -67,7 +67,7 @@ const AmenitiesPage = () => {
           <div className="reveal relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-25px_rgba(109,30,25,0.35)]">
               <img 
-                src="/photos/rest_1.jpg" 
+                src="/photos/rest_1.webp" 
                 alt="Rivelle in-house dining" 
                 loading="lazy" 
                 className="w-full h-full object-cover" 

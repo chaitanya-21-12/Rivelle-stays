@@ -3,21 +3,21 @@
 // Property image collections — organized by room number
 export const PHOTOS = {
   // Super Deluxe rooms (101, 102)
-  superDeluxe101: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map((n) => `/photos/superdeluxe_101/sd101_${n}.jpg`),
-  superDeluxe102: [1,2,3,4,5,6,7,8,9,10,11].map((n) => `/photos/superdeluxe_102/sd102_${n}.jpg`),
+  superDeluxe101: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map((n) => `/photos/superdeluxe_101/sd101_${n}.webp`),
+  superDeluxe102: [1,2,3,4,5,6,7,8,9,10,11].map((n) => `/photos/superdeluxe_102/sd102_${n}.webp`),
 
   // Deluxe rooms (103, 104, 202, 203)
-  deluxe103: [1,2,3,4,5,6,7,8,9,10,11].map((n) => `/photos/deluxe_103/d103_${n}.jpg`),
-  deluxe104: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_104/d104_${n}.jpg`),
+  deluxe103: [1,2,3,4,5,6,7,8,9,10,11].map((n) => `/photos/deluxe_103/d103_${n}.webp`),
+  deluxe104: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_104/d104_${n}.webp`),
   // 202 & 203 photos — pending Drive access
-  deluxe202: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_103/d103_${n}.jpg`),
-  deluxe203: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_104/d104_${n}.jpg`),
+  deluxe202: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_103/d103_${n}.webp`),
+  deluxe203: [1,2,3,4,5,6,7,8,9,10].map((n) => `/photos/deluxe_104/d104_${n}.webp`),
 
   // Suite (201)
-  suite201: [1,2,3,4,5,6,7].map((n) => `/photos/suite_201/s201_${n}.jpg`),
+  suite201: [1,2,3,4,5,6,7].map((n) => `/photos/suite_201/s201_${n}.webp`),
 
   // Common areas
-  hall: [1,2,3,4,5].map((n) => `/photos/hall/hall_${n}.jpg`),
+  hall: [1,2,3,4,5].map((n) => `/photos/hall/hall_${n}.webp`),
 };
 
 export const PROPERTY = {
@@ -48,7 +48,7 @@ export const NAV_LINKS = [
 ];
 
 // Hero: wide landscape shot — no stretching on desktop
-export const HERO_IMAGE = "/photos/hero_wide.jpg";
+export const HERO_IMAGE = "/photos/hero_wide.webp";
 
 export const ROOMS = [
   {

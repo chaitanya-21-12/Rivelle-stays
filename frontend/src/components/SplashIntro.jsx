@@ -38,7 +38,7 @@ const SplashIntro = ({ onComplete }) => {
       {/* Property image behind doors */}
       <div className="absolute inset-0 bg-ink">
         <img
-          src="/photos/property_front.png"
+          src="/photos/property_front.webp"
           alt="Rivelle Boutique Stays entrance"
           className={`w-full h-full object-cover transition-transform duration-[6000ms] ease-out ${
             stage >= 1 ? "scale-110" : "scale-100"

@@ -59,7 +59,7 @@ const AboutPage = () => {
             <div className="flex flex-col gap-4">
               <div className="overflow-hidden rounded-sm">
                 <img
-                  src="/photos/jai_pragya.jpg"
+                  src="/photos/jai_pragya.webp"
                   alt="Jai and Pragya — founders of Rivelle Boutique Stays"
                   loading="lazy"
                   className="w-full object-cover object-top"
