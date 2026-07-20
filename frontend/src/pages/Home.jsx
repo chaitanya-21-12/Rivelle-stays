@@ -69,8 +69,7 @@ const Home = () => {
               Three ways to <span className="italic text-rose">stay a while.</span>
             </h2>
             <p className="text-ink/70">
-              Each room styled around the same warm gerua palette — you’re choosing how much
-              space, view and quiet you want.
+              Every room is uniquely designed, offering its own style, character, and comfort.
             </p>
           </div>
 

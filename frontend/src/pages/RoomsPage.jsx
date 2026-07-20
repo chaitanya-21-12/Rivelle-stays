@@ -10,7 +10,7 @@ const RoomsPage = () => {
       <PageHeader
         eyebrow="ROOMS & SUITES"
         title={<>Choose your <span className="italic text-rose">quiet corner.</span></>}
-        subtitle="Each room styled around the same warm gerua palette — you’re only choosing how much space, view and quiet you want."
+        subtitle="Every room is uniquely designed, offering its own style, character, and comfort."
       />
 
       <section className="pb-24 md:pb-32">
