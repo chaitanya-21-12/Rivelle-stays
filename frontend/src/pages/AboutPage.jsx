@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Star, ArrowRight, Heart, Home, Coffee } from "lucide-react";
+import { ArrowRight, Heart, Home, Users } from "lucide-react";
 import PageHeader from "../components/PageHeader";
-import { PROPERTY, PHOTOS } from "../data/site";
 
 const VALUES = [
-  { icon: Heart, title: "Personal, never chain", desc: "A small property, a small team, and a real relationship with every guest who walks through the door." },
-  { icon: Home, title: "Rooted in Jaipur", desc: "Every detail — the block prints, the framed miniatures, the warm lamp glow — draws from the Pink City’s craft heritage." },
-  { icon: Coffee, title: "Slow by design", desc: "Rivelle is built for slow mornings, unhurried tea, and evenings that let the day unwind gently." },
+  { icon: Users, title: "Personal, never chain", desc: "A small property, a small team, and a real relationship with every guest who walks through the door." },
+  { icon: Home, title: "Rooted in Jaipur", desc: "Every detail — the warm tones, the handcrafted touches, the natural light — draws from the Pink City's timeless craft heritage." },
+  { icon: Heart, title: "Intentionally small", desc: "Rivelle is small by choice. That's what lets us know our guests, recommend our favourite corners of Jaipur, and make every stay feel personal." },
 ];
 
 const AboutPage = () => {
@@ -15,37 +14,45 @@ const AboutPage = () => {
     <div className="bg-blush min-h-screen">
       <PageHeader
         eyebrow="OUR STORY"
-        title={<>Steeped in <span className="italic text-rose">gerua warmth.</span></>}
-        subtitle="An intimate boutique homestay in the heart of Jaipur — hand-picked interiors, warm hospitality, and a distinctly Indian sense of place."
+        title={<>Where Jaipur's heritage meets <span className="italic text-rose">heartfelt hospitality.</span></>}
+        subtitle="Rivelle began with a simple belief — that the most memorable stays aren't defined by the number of rooms, but by the care behind every one of them."
       />
 
       {/* Story */}
       <section className="pb-24 md:pb-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
           <div className="reveal">
-            <h2 className="font-display text-3xl md:text-4xl text-ink mb-6 leading-tight">
-              Where <span className="italic text-rose">Jaipur’s craft heritage</span> meets a
-              modern homestay.
+            <h2 className="font-display text-3xl md:text-4xl text-ink mb-8 leading-tight">
+              Built with our own hands, <span className="italic text-rose">and a lot of late nights.</span>
             </h2>
             <div className="space-y-5 text-ink/75 leading-relaxed">
               <p>
-                Rivelle Boutique Stays was born from a simple idea — that great hospitality
-                is quiet, personal, and rooted in the place it lives in. Set in the heart of
-                Jaipur’s Gopalbari, we’re a short walk from the Pink City’s heritage core, yet
-                far enough removed to feel like a private retreat.
+                We're <span className="font-medium text-rose">Jai and Pragya</span>, a husband-and-wife team who built Rivelle
+                with our own hands, countless late nights, and an unwavering attention to detail. From choosing every colour
+                palette and piece of furniture to curating the guest experience, every decision was made with one question in mind:
+              </p>
+              <p className="font-medium text-ink italic text-lg border-l-2 border-rose/40 pl-4">
+                "Would we love staying here ourselves?"
               </p>
               <p>
-                Every room is composed around a warm gerua palette — hand-block textiles,
-                framed miniature art, carved wood, and generous natural light. Nothing is
-                accidental. Nothing feels like a chain hotel.
+                Nestled in the heart of Jaipur, Rivelle blends the city's timeless craftsmanship with contemporary comfort.
+                Warm earthy tones, handcrafted details, natural light, and thoughtfully designed spaces come together to create
+                a stay that feels elegant, intimate, and unmistakably personal.
               </p>
               <p>
-                Our small in-house team — led by our host <span className="font-medium text-rose">{PROPERTY.hostedBy}</span>{" "}
-                — is on hand to make your stay feel personal from the moment you arrive.
+                Unlike a large hotel, Rivelle is intentionally small. That allows us to know our guests, recommend our favourite
+                corners of Jaipur, and make every stay feel less like checking into a hotel and more like being welcomed into a
+                thoughtfully curated home.
               </p>
+              <p>
+                Whether you're here to explore the Pink City, celebrate a special occasion, or simply slow down for a few days,
+                we hope Rivelle becomes a place you'll always look forward to returning to.
+              </p>
+              <div className="pt-5 border-t border-rose/15">
+                <p className="italic text-ink/80">We can't wait to welcome you.</p>
+                <p className="font-medium text-rose mt-1">— Jai &amp; Pragya</p>
+              </div>
             </div>
-
-
           </div>
 
           <div className="reveal relative">
@@ -95,7 +102,7 @@ const AboutPage = () => {
               Come <span className="italic text-rose">stay beautifully.</span>
             </h2>
             <p className="text-ink/70 mb-10 max-w-xl mx-auto">
-              Whether you’re here for a weekend or a longer stay, we’d love to help you
+              Whether you're here for a weekend or a longer stay, we'd love to help you
               plan something quietly memorable.
             </p>
             <div className="flex items-center justify-center gap-3 flex-wrap">
