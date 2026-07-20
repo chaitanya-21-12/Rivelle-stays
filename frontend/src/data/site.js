@@ -132,7 +132,6 @@ export const ROOMS = [
 export const AMENITIES = [
   { name: "24×7 Front Desk", note: "ALWAYS ON DUTY", icon: "Clock", desc: "Our team is available around the clock — for late arrivals, early check-outs, and everything in between." },
   { name: "In-house Café & Dining", note: "ALL-DAY MENU", icon: "UtensilsCrossed", desc: "Indian and international cuisine served all day — from home-style breakfasts to pizzas, artisan coffee and more." },
-  { name: "Specialty Coffee", note: "ARTISAN BREWS", icon: "Coffee", desc: "Freshly brewed pour-overs, cold brews and chai — served at our café or delivered to your room." },
   { name: "Premium Bedding", note: "HOTEL-GRADE LINEN", icon: "BedDouble", desc: "High-thread-count cotton sheets, plush pillows and a duvet that makes mornings difficult to leave." },
   { name: "En-Suite Bathrooms", note: "PRIVATE & WELL-FITTED", icon: "Bath", desc: "Every room has its own private bathroom with 24-hour hot water, rain shower and quality fixtures." },
   { name: "Secure Stay", note: "YOUR SAFETY, FIRST", icon: "ShieldCheck", desc: "CCTV throughout, secure key-card access and a team trained in guest safety protocols." },
