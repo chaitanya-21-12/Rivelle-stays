@@ -144,7 +144,7 @@ export const AMENITIES = [
   { name: "Complimentary Water", note: "ALWAYS STOCKED", icon: "GlassWater", desc: "Chilled bottled water replenished daily in your room — because staying hydrated should never require a trip to the lobby." },
   { name: "Wardrobe & Storage", note: "AMPLE SPACE", icon: "Package", desc: "A full wardrobe with hangers, shelving and a luggage rack — so unpacking actually feels worth it." },
   { name: "Elevator Access", note: "ALL FLOORS", icon: "ArrowUpDown", desc: "A lift connects all floors — for guests with heavy luggage or anyone who'd simply rather not take the stairs." },
-  { name: "Power Backup", note: "UNINTERRUPTED", icon: "Zap", desc: "Generator backup ensures uninterrupted power to all rooms and common areas — no surprises during peak Jaipur summers." },
+  { name: "Power Backup", note: "UNINTERRUPTED", icon: "Zap", desc: "Inverter backup ensures uninterrupted power to all rooms and common areas — no surprises during peak Jaipur summers." },
   { name: "On-site Parking", note: "COMPLIMENTARY", icon: "Car", desc: "Dedicated parking available on the property for guests arriving by personal vehicle or rental." },
   { name: "Prime Location", note: "CITY CENTRE ADJACENT", icon: "MapPin", desc: "Situated minutes from Jaipur's major landmarks — a practical base for sightseeing, dining and business." },
   { name: "Work-friendly Spaces", note: "DESK IN EVERY ROOM", icon: "Laptop", desc: "A dedicated work desk and reliable WiFi in every room — designed for the guest who needs to stay productive." },
