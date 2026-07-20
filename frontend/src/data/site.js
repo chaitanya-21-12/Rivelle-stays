@@ -73,6 +73,7 @@ export const ROOMS = [
       "Tea & Coffee Station",
       "Premium Bath Amenities",
       "Hairdryer",
+      "Paid Laundry Service",
     ],
   },
   {
@@ -98,6 +99,7 @@ export const ROOMS = [
       "Complimentary High-Speed Wi-Fi",
       "Smart TV",
       "Tea & Coffee Station",
+      "Paid Laundry Service",
     ],
   },
   {
@@ -124,6 +126,7 @@ export const ROOMS = [
       "Complimentary High-Speed Wi-Fi",
       "Smart TV",
       "Tea & Coffee Station",
+      "Paid Laundry Service",
     ],
   },
 ];
