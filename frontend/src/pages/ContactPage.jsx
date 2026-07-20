@@ -153,9 +153,6 @@ const ContactPage = () => {
                 <Send size={13} />
                 SEND ENQUIRY VIA WHATSAPP
               </button>
-              <a href={`https://wa.me/${PROPERTY.whatsapp}`} target="_blank" rel="noreferrer" className="text-[11px] tracking-widest-2 text-ink/70 hover:text-rose underline underline-offset-4 decoration-ink/20">
-                OR MESSAGE US DIRECTLY
-              </a>
             </div>
           </form>
         </div>
