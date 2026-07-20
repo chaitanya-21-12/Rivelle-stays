@@ -49,14 +49,14 @@ const Header = () => {
         </Link>
 
         {/* Desktop nav — centered absolutely */}
-        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-5 xl:gap-8">
           {NAV_LINKS.map((l) => (
             <NavLink
               key={l.to}
               to={l.to}
               end={l.to === "/"}
               className={({ isActive }) =>
-                `nav-link text-[11px] tracking-widest-2 transition-colors ${isActive ? "active" : ""
+                `nav-link text-[11px] tracking-widest-2 transition-colors whitespace-nowrap ${isActive ? "active" : ""
                 } ${solid
                   ? "text-ink/80 hover:text-rose"
                   : "text-cream/85 hover:text-cream"
