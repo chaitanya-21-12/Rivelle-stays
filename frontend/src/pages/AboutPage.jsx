@@ -31,7 +31,7 @@ const AboutPage = () => {
                 with our own hands, countless late nights, and an unwavering attention to detail. From choosing every colour
                 palette and piece of furniture to curating the guest experience, every decision was made with one question in mind:
               </p>
-              <p className="font-medium text-ink italic text-lg border-l-2 border-rose/40 pl-4">
+              <p className="font-medium text-ink italic text-base md:text-lg border-l-2 border-rose/40 pl-4 whitespace-nowrap overflow-hidden text-ellipsis">
                 "Would we love staying here ourselves?"
               </p>
               <p>

@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
 
           <div className="mt-4 md:mt-6 font-display italic text-cream/95 text-xl md:text-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
-            Stay Beautifully in the Pink City
+            Stay Beautifully
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
