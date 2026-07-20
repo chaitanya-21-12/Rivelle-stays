@@ -33,6 +33,9 @@ export const PROPERTY = {
   reviews: 9,
   hostedBy: "Pragya",
   whatsapp: "918619553323",
+  instagram: "https://www.instagram.com/rivellestays/",
+  tripAdvisor: "https://www.tripadvisor.in/Hotel_Review-g304555-d34516530-Reviews-Rivelle_Boutique_Stays_Stay_Beautifully-Jaipur_Jaipur_District_Rajasthan.html",
+  facebook: "#",
 };
 
 export const NAV_LINKS = [
