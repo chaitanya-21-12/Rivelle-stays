@@ -22,8 +22,17 @@ const Footer = () => {
               <SocialBtn href={PROPERTY.instagram} icon={<Instagram size={15} />} />
               <SocialBtn href={PROPERTY.facebook} icon={<Facebook size={15} />} />
               <SocialBtn href={PROPERTY.tripAdvisor} icon={
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 3.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 2a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 1.75a2.75 2.75 0 1 1 0 5.5 2.75 2.75 0 0 1 0-5.5zm0 1.25a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM6.5 7.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm11 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                <svg viewBox="0 0 100 70" width="22" height="15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="50" cy="35" rx="48" ry="32" />
+                  <circle cx="28" cy="35" r="14" fill="#2a1208" />
+                  <circle cx="28" cy="35" r="9" fill="currentColor" opacity="0.12" />
+                  <circle cx="28" cy="35" r="5.5" fill="#2a1208" />
+                  <circle cx="25" cy="32" r="2" fill="currentColor" opacity="0.45" />
+                  <circle cx="72" cy="35" r="14" fill="#2a1208" />
+                  <circle cx="72" cy="35" r="9" fill="currentColor" opacity="0.12" />
+                  <circle cx="72" cy="35" r="5.5" fill="#2a1208" />
+                  <circle cx="69" cy="32" r="2" fill="currentColor" opacity="0.45" />
+                  <polygon points="50,46 45,40 55,40" fill="#2a1208" />
                 </svg>
               } />
             </div>
