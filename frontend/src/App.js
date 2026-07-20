@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import RoomsPage from "./pages/RoomsPage";
 import RoomDetail from "./pages/RoomDetail";
 import AmenitiesPage from "./pages/AmenitiesPage";
+import CafePage from "./pages/CafePage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -57,6 +58,7 @@ function App() {
             <Route path="/rooms" element={<RoomsPage />} />
             <Route path="/rooms/:slug" element={<RoomDetail />} />
             <Route path="/amenities" element={<AmenitiesPage />} />
+            <Route path="/cafe" element={<CafePage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/our-story" element={<AboutPage />} />

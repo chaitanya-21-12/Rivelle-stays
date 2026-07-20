@@ -42,6 +42,7 @@ export const NAV_LINKS = [
   { label: "HOME", to: "/" },
   { label: "OUR STORY", to: "/our-story" },
   { label: "ROOMS", to: "/rooms" },
+  { label: "CAFÉ", to: "/cafe" },
   { label: "AMENITIES", to: "/amenities" },
   { label: "GALLERY", to: "/gallery" },
   { label: "CONTACT", to: "/contact" },
