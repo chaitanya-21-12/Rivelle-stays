@@ -56,13 +56,19 @@ const AboutPage = () => {
           </div>
 
           <div className="reveal relative">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                <img src="/photos/property_front.png" alt="Rivelle Boutique Stays exterior" loading="lazy" className="w-full h-full object-cover" />
+            <div className="flex flex-col gap-4">
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src="/photos/jai_pragya.jpg"
+                  alt="Jai and Pragya — founders of Rivelle Boutique Stays"
+                  loading="lazy"
+                  className="w-full object-cover object-top"
+                  style={{ maxHeight: "520px" }}
+                />
               </div>
-              <div className="aspect-[3/4] overflow-hidden rounded-sm mt-10">
-                <img src="/photos/rest_1.jpg" alt="Rivelle in-house dining" loading="lazy" className="w-full h-full object-cover" />
-              </div>
+              <p className="text-center text-[11px] tracking-widest-2 text-ink/40 italic">
+                Jai &amp; Pragya — Rivelle Boutique Stays
+              </p>
             </div>
           </div>
         </div>
