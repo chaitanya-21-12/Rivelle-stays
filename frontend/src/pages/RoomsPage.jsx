@@ -57,7 +57,7 @@ const RoomsPage = () => {
 
                 <div className="mt-auto flex items-end justify-between gap-4 flex-wrap">
                   <div>
-                    <div className="text-[10px] tracking-widest-3 text-ink/50 mb-1">TARIFF</div>
+                    <div className="text-[10px] tracking-widest-3 text-ink/50 mb-1">STARTING FROM</div>
                     <div className="font-display text-2xl text-rose">{r.priceLabel}</div>
                   </div>
                   <Link

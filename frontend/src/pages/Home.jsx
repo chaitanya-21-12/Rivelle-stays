@@ -101,7 +101,7 @@ const Home = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-[10px] tracking-widest-3 text-ink/50 mb-0.5">TARIFF</div>
+                      <div className="text-[10px] tracking-widest-3 text-ink/50 mb-0.5">STARTING FROM</div>
                       <div className="font-display text-lg text-rose">{r.priceLabel}</div>
                     </div>
                     <div className="flex items-center gap-1 text-[11px] tracking-widest-2 text-rose group-hover:gap-2 transition-all">

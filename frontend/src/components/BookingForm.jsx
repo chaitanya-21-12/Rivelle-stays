@@ -57,7 +57,7 @@ const BookingForm = ({ room }) => {
     <div className="bg-cream/80 backdrop-blur border border-rose/15 rounded-lg p-6 md:p-7 shadow-[0_20px_50px_-25px_rgba(109,30,25,0.25)]">
       <div className="flex items-start justify-between gap-4 mb-6">
         <div>
-          <div className="text-[10px] tracking-widest-3 text-rose/70 mb-1.5">TARIFF</div>
+          <div className="text-[10px] tracking-widest-3 text-rose/70 mb-1.5">STARTING FROM</div>
           <div className="font-display text-2xl md:text-3xl text-rose">{room.priceLabel}</div>
           <div className="text-[10px] tracking-widest-3 text-ink/50 mt-1">{room.priceHint}</div>
         </div>
