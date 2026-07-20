@@ -39,7 +39,7 @@ const Footer = () => {
                     to={l.to}
                     className="text-sm text-cream/70 hover:text-gerua-glow transition-colors"
                   >
-                    {l.label.charAt(0) + l.label.slice(1).toLowerCase()}
+                    {l.label.split(" ").map(w => w.charAt(0) + w.slice(1).toLowerCase()).join(" ")}
                   </Link>
                 </li>
               ))}
